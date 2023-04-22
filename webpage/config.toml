@@ -18,3 +18,8 @@ theme = 'odlot'
     pre = "bi bi-tags"
     url = "/tags/"
     weight = 3
+  [[menu.main]]
+    name = "About"
+    pre = "bi bi-blockquote-right"
+    url = "/about/"
+    weight = 4
