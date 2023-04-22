@@ -1,4 +1,20 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Marco's Webpage"
 theme = 'odlot'
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "bi bi-house"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    pre = "bi bi-file-earmark-text"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    pre = "bi bi-tags"
+    url = "/tags/"
+    weight = 3
