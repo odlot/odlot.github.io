@@ -5,6 +5,14 @@ code {
     color: #5E81AC;
 }
 
+a {
+    color: #4C566A;
+}
+
+a:hover {
+    color: #5E81AC;
+}
+
 #list {
     font-family: "Satoshi-Light";
 }
@@ -43,27 +51,11 @@ code {
     color: #4C566A;
 }
 
-.footer>a {
-    color: #4C566A;
-}
-
-.foter>a:hover {
-    color: #5E81AC;
-}
-
 #about {
     font-family: "Satoshi-Light";
 }
 
 /* Post summary */
-.post-summary-title>a {
-    color: #4C566A;
-}
-
-.post-summary-title>a:hover {
-    color: #5E81AC;
-}
-
 .post-summary {
     color: #4C566A;
 }
