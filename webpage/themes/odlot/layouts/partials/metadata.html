@@ -2,7 +2,7 @@
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
 <i class="bi bi-calendar"></i>
 <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-{{ with .Params.tags }}
+{{ with .Params.tags }}&ensp;
 <i class="bi bi-tags"></i>
 {{ range . }}
 {{ $href := print (absURL "tags/") (urlize .) }}

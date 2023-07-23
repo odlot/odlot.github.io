@@ -1,7 +1,83 @@
+@import url('satoshi.css');
+@import url('normalize.css');
+
+code {
+    color: #5E81AC;
+}
+
+#list {
+    font-family: "Satoshi-Light";
+}
+
+.title {
+    color: #4C566A;
+}
+
+.nav-link {
+    color: #4C566A;
+}
+
+.nav-link:hover {
+    color: #5E81AC;
+}
+
 #nav-border {
-    border-bottom: 1px solid #212529;
+    font-family: "Satoshi-Light";
+    border-bottom: 1px solid #4C566A;
+}
+
+#home {
+    font-family: "Satoshi-Light";
+}
+
+#posts {
+    font-family: "Satoshi-Light";
+}
+
+#post {
+    font-family: "Satoshi-Light";
 }
 
 .footer {
-    color: darkgrey;
+    font-family: "Satoshi-Light";
+    color: #4C566A;
+}
+
+.footer>a {
+    color: #4C566A;
+}
+
+.foter>a:hover {
+    color: #5E81AC;
+}
+
+#about {
+    font-family: "Satoshi-Light";
+}
+
+/* Post summary */
+.post-summary-title>a {
+    color: #4C566A;
+}
+
+.post-summary-title>a:hover {
+    color: #5E81AC;
+}
+
+.post-summary {
+    color: #4C566A;
+}
+
+.post-summary:hover {
+    color: #5E81AC;
+}
+
+.post-summary-container {
+    font-family: "Satoshi-Light";
+    outline-color: #E5E9F0;
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 8px 4px 5px #ECEFF4;
+    padding: 8px;
+    margin-bottom: 16px;
 }

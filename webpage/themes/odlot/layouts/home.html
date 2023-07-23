@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div id="home" class="container">
+  <h1 class="title">
+      {{ .Site.Title }}
+  </h1>
+  <div>
+    {{ range first 3 ( where .Site.Pages.ByPublishDate.Reverse "Type" "featured" ) }}
+      <li>
+        <a href="{{ .Permalink }}">
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
