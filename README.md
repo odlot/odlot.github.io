@@ -11,6 +11,7 @@ This webpage is built with [hugo](https://gohugo.io) and hosted via GitHub Pages
 To locally test the webpage, navigate into the `webpage` folder and execute:
 
 ```
+cd webpage
 hugo server --ignoreCache -D
 ```
 
