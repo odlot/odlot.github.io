@@ -1,4 +1,3 @@
-@import url('satoshi.css');
 @import url('normalize.css');
 
 code {
@@ -14,7 +13,7 @@ a:hover {
 }
 
 #list {
-    font-family: "Satoshi-Light";
+    font-family: 'Roboto', sans-serif;
 }
 
 .title {
@@ -30,29 +29,29 @@ a:hover {
 }
 
 #nav-border {
-    font-family: "Satoshi-Light";
+    font-family: 'Roboto', sans-serif;
     border-bottom: 1px solid #4C566A;
 }
 
 #home {
-    font-family: "Satoshi-Light";
+    font-family: 'Roboto', sans-serif;
 }
 
 #posts {
-    font-family: "Satoshi-Light";
+    font-family: 'Roboto', sans-serif;
 }
 
 #post {
-    font-family: "Satoshi-Light";
+    font-family: 'Roboto', sans-serif;
 }
 
 .footer {
-    font-family: "Satoshi-Light";
+    font-family: 'Roboto', sans-serif;
     color: #4C566A;
 }
 
 #about {
-    font-family: "Satoshi-Light";
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Post summary */
@@ -65,7 +64,7 @@ a:hover {
 }
 
 .post-summary-container {
-    font-family: "Satoshi-Light";
+    font-family: 'Roboto', sans-serif;
     outline-color: #E5E9F0;
     outline-style: solid;
     outline-width: 1px;
