@@ -5,21 +5,9 @@ theme = 'odlot'
 [menu]
   [[menu.main]]
     name = "Home"
-    pre = "bi bi-house"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Posts"
-    pre = "bi bi-file-earmark-text"
-    url = "/posts/"
+    name = "Blog"
+    url = "/blog/"
     weight = 2
-  [[menu.main]]
-    name = "Tags"
-    pre = "bi bi-tags"
-    url = "/tags/"
-    weight = 3
-  [[menu.main]]
-    name = "About"
-    pre = "bi bi-blockquote-right"
-    url = "/about/"
-    weight = 4
