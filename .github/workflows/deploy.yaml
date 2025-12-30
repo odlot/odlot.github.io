@@ -41,9 +41,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y pandoc
       - name: Build `index.html` from `notes.md` using template
         run: |
-          if [ ! -f webpage/notes.md ]; then echo "webpage/notes.md not found"; exit 1; fi
-          if [ ! -f webpage/index.template.html ]; then echo "webpage/index.template.html not found"; exit 1; fi
-          pandoc webpage/notes.md -o webpage/index.html --template=webpage/index.template.html -V title="Notes" -s --toc
+          pandoc webpage/notes.md -o webpage/index.html --template=webpage/index.template.html -s
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
