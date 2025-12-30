@@ -2,17 +2,19 @@
 
 This repository contains the source code of `odlot.github.io`.
 
-This webpage is built with [hugo](https://gohugo.io) and hosted via GitHub Pages.
-
 ---
 
 ## Locally testing the webpage
 
 To locally test the webpage, navigate into the `webpage` folder and execute:
 
+```bash
+# Build `index.html` from `notes.md` using the template:
+
+```bash
+pandoc webpage/notes.md -o webpage/index.html --template=webpage/index.template.html -V title="Notes" -s --toc
+open webpage/index.html
 ```
-cd webpage
-hugo server --ignoreCache -D
 ```
 
-Then browse to the web server bound to localhost to visually debug your changes.
+Note: GitHub Actions will run this conversion automatically during the Pages deployment.
