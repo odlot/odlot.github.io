@@ -39,7 +39,13 @@ jobs:
 Source: <https://dev.to/orenme/stop-waiting-start-building-my-practical-dive-into-github-copilot-agent-mode-1644>
 
 ```txt
-I want to build a simple cross-platform task management app called 'TaskFlow' that helps users create, track, and prioritize their daily tasks. Please generate a comprehensive Product Requirements Document (PRD) and a Detailed Design Document (DR) for this app. The PRD should outline the problem statement, target users, key features, user flows, and success criteria. The DR should cover the system architecture, technology stack, data models, API design, and
+I want to build a simple cross-platform task management app called 'TaskFlow' that helps users create, track, and prioritize their daily tasks. Please generate a comprehensive Product Requirements Document (PRD) and a Detailed Design Document (DDD) for this app. The PRD should outline the problem statement, target users, key features, user flows, and success criteria. The DR should cover the system architecture, technology stack, data models, API design, and
 potential scalability considerations. Do not generate any code
 —just provide structured documentation
+```
+
+Keep commits atomic:
+
+```txt
+Keep commits atomic: commit only the files you touched and list each path explicitly. For tracked files run `git commit -m "<scoped message>" -- path/to/file1 path/to/file2`. For brand-new files, use the one-liner `git restore --staged :/ && git add "path/to/file1" "path/to/file2" && git commit -m "<scoped message>" -- path/to/file1 path/to/file2`
 ```
