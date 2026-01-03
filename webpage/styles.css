@@ -1,1 +1,56 @@
-html, body { height: 100%; }
+/* Layout basics */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* Page container to keep content centered */
+.container {
+  max-width: 65%; /* keeps line-length comfortable for reading */
+  margin: 3rem auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* -----------------------------
+   Code block box styles
+   ----------------------------- */
+pre {
+  background: #ffffff;                 /* light box background */
+  border: 1px solid #e5e7eb;           /* subtle border */
+  padding: 1rem;                       /* spacing inside the box */
+  border-radius: 8px;                  /* rounded corners */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  overflow: auto;                      /* allow vertical scroll when needed */
+  white-space: pre-wrap;               /* wrap long lines but keep line breaks */
+  word-break: break-word;              /* break long words when needed */
+  overflow-wrap: anywhere;             /* stronger wrapping fallback */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #0f172a;
+  margin: 1rem 0;
+} 
+
+/* Inline code styling */
+code {
+  font-family: ui-monospace, Menlo, Monaco, "Roboto Mono", monospace;
+  background: #f3f4f6;
+  padding: 0.12rem 0.35rem;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.9em;
+  color: #111827;
+  white-space: pre-wrap;   /* allow wrapping for very long inline snippets */
+  word-break: break-word;
+}
+
+/* Ensure code inside pre renders as block but allows wrapping when needed */
+pre code {
+  display: block;
+  white-space: pre-wrap;    /* allow wrapping inside the pre box */
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
