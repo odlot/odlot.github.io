@@ -49,3 +49,23 @@ Keep commits atomic:
 ```txt
 Keep commits atomic: commit only the files you touched and list each path explicitly. For tracked files run `git commit -m "<scoped message>" -- path/to/file1 path/to/file2`. For brand-new files, use the one-liner `git restore --staged :/ && git add "path/to/file1" "path/to/file2" && git commit -m "<scoped message>" -- path/to/file1 path/to/file2`
 ```
+
+## VS Code
+
+- Use `copilot-instructions.md`: <https://code.visualstudio.com/docs/copilot/customization/overview>
+  - <https://code.visualstudio.com/docs/copilot/customization/custom-instructions#_specify-custom-instructions-in-settings>
+- <https://github.com/github/awesome-copilot/tree/main>
+
+```json
+  "github.copilot.chat.reviewSelection.instructions": [
+      {
+          "file": ".copilot-review-instructions.md"
+      },
+      {
+          "text": "Resolve all TODO tasks."
+      }
+  ],
+  "github.copilot.chat.testGeneration.instructions": [],
+  "github.copilot.chat.codeGeneration.instructions": [],
+  "github.copilot.chat.commitMessageGeneration.instructions": []
+```
