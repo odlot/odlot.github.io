@@ -1,0 +1,21 @@
+{
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true
+  },
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "github.copilot.chat.reviewSelection.instructions": [
+    {
+      "file": ".github/instructions/review.instructions.md"
+    }
+  ],
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": ".github/instructions/commit-message.instructions.md"
+    }
+  ],
+  "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
+    {
+      "file": ".github/instructions/pr-description.instructions.md"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "rgPattern",
+      "type": "promptString",
+      "description": "ripgrep pattern (regex)",
+      "default": "TODO|FIXME"
+    },
+    {
+      "id": "rgPath",
+      "type": "promptString",
+      "description": "path to search (relative)",
+      "default": "."
+    },
+    {
+      "id": "rgGlob",
+      "type": "promptString",
+      "description": "file glob (optional)",
+      "default": "*"
+    },
+    {
+      "id": "ghPrNumber",
+      "type": "promptString",
+      "description": "PR number",
+      "default": ""
+    }
+  ],
+  "tasks": [
+    {
+      "label": "rg: files",
+      "type": "shell",
+      "command": "rg",
+      "args": [
+        "--files"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "rg: search",
+      "type": "shell",
+      "command": "rg",
+      "args": [
+        "-n",
+        "${input:rgPattern}",
+        "${input:rgPath}"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "rg: search (glob)",
+      "type": "shell",
+      "command": "rg",
+      "args": [
+        "-n",
+        "-g",
+        "${input:rgGlob}",
+        "${input:rgPattern}",
+        "${input:rgPath}"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "gh: auth status",
+      "type": "shell",
+      "command": "gh",
+      "args": [
+        "auth",
+        "status"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "gh: pr list",
+      "type": "shell",
+      "command": "gh",
+      "args": [
+        "pr",
+        "list",
+        "--limit",
+        "20"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "gh: pr status",
+      "type": "shell",
+      "command": "gh",
+      "args": [
+        "pr",
+        "status"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "gh: pr view (number)",
+      "type": "shell",
+      "command": "gh",
+      "args": [
+        "pr",
+        "view",
+        "${input:ghPrNumber}"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "gh: pr view (summary json)",
+      "type": "shell",
+      "command": "gh",
+      "args": [
+        "pr",
+        "view",
+        "${input:ghPrNumber}",
+        "--json",
+        "number,title,body,baseRefName,headRefName,changedFiles,additions,deletions,reviewDecision,mergeable"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "gh: pr files (number)",
+      "type": "shell",
+      "command": "gh",
+      "args": [
+        "pr",
+        "diff",
+        "${input:ghPrNumber}",
+        "--name-only"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "gh: pr diff (number)",
+      "type": "shell",
+      "command": "gh",
+      "args": [
+        "pr",
+        "diff",
+        "${input:ghPrNumber}"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "gh: pr checks required (number)",
+      "type": "shell",
+      "command": "gh",
+      "args": [
+        "pr",
+        "checks",
+        "${input:ghPrNumber}",
+        "--required"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "gh: pr checks (number)",
+      "type": "shell",
+      "command": "gh",
+      "args": [
+        "pr",
+        "checks",
+        "${input:ghPrNumber}"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

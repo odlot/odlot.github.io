@@ -65,7 +65,46 @@ Keep commits atomic: commit only the files you touched and list each path explic
           "text": "Resolve all TODO tasks."
       }
   ],
+  // Deprecated
   "github.copilot.chat.testGeneration.instructions": [],
+  // Deprecated
   "github.copilot.chat.codeGeneration.instructions": [],
   "github.copilot.chat.commitMessageGeneration.instructions": []
 ```
+
+Use this as the base:
+
+```json
+{
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true
+}
+```
+
+Then put coding/test rules in:
+
+- .github/copilot-instructions.md (global)
+- .github/instructions/*.instructions.md with applyTo (scoped)
+
+- Use one repo-level `.github/copilot-instructions.md` for global rules.
+- Put detailed/context-specific rules in `.github/instructions/*.instructions.md` with `applyTo` globs.
+- In `.github/copilot-instructions.md`, just state that scoped instructions live under `.github/instructions`; no special “link” syntax is required.
+- Keep VS Code per-feature instruction settings only for special cases (review, commit, PR description), not for general code/test generation.
+
+Minimal setup to keep:
+
+- .github/copilot-instructions.md
+- .github/instructions/*.instructions.md
+- .vscode/settings.json with "github.copilot.chat.codeGeneration.useInstructionFiles": true
+
+Also important: these instructions affect chat/codegen flows, not inline autocomplete suggestions.
+
+- <https://github.com/github/awesome-copilot/blob/main/instructions/rust.instructions.md>
+
+1. .github/copilot-instructions.md for short repo-wide rules.
+2. .github/instructions/*.instructions.md for path/language/domain rules (applyTo).
+3. VS Code settings only for special outputs (reviewSelection, commitMessageGeneration, pullRequestDescriptionGeneration).
+4. Optional AGENTS.md only if you actively use multiple agents and want shared cross-agent behavior.
+
+---
+
+Follow: <https://code.visualstudio.com/docs/copilot/customization/custom-instructions>
