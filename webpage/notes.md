@@ -108,3 +108,5 @@ Also important: these instructions affect chat/codegen flows, not inline autocom
 ---
 
 Follow: <https://code.visualstudio.com/docs/copilot/customization/custom-instructions>
+
+- https://github.com/forrestchang/andrej-karpathy-skills
