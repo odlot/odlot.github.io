@@ -109,4 +109,14 @@ Also important: these instructions affect chat/codegen flows, not inline autocom
 
 Follow: <https://code.visualstudio.com/docs/copilot/customization/custom-instructions>
 
-- https://github.com/forrestchang/andrej-karpathy-skills
+- <https://github.com/forrestchang/andrej-karpathy-skills>
+
+### Uninstalling global packages with `npm``
+
+```bash
+# List all packages and check the path `.../.nvm/versions/node/v22.17.0/lib`
+npm -g ls
+# Switch to that version
+nvm use 22.17.0 # or `nvm use system`
+npm uninstall -g @vendor/package
+```
